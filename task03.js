@@ -1,26 +1,23 @@
 'use strict';
 
-const calculate = (totalAmount, numberProducts, promocode) => {
-    let discount = 0;
+// Первый способ
 
-    if (numberProducts > 10) {
-        discount += totalAmount * 0.03;
-    }
-   
-    if (totalAmount >= 30000) {
-        discount += (totalAmount - 30000) * 0.15;
-    }
+const customText = prompt('Введите текст, который нужно перевернуть', '');
 
-    if (promocode === 'METHED') {
-        discount += totalAmount * 0.1;
-    }
-
-    if (promocode === 'G3H2Z1' && (totalAmount - discount) > 2000) {
-        discount += 500;
-    }
-
-    return totalAmount - discount;
+const reverseString = (string) => {
+    return string.split('').reverse().join('');
 }
 
-console.log(calculate(10000, 15, 'METHED'));
-console.log(calculate(150000, 6, 'G3H2Z1'));
+console.log(reverseString(customText));
+
+// Второй способ
+
+const reverseString2 = (string) => {
+    let newString = '';
+    for (let i = string.length -1; i>=0; i--) {
+        newString += string[i]; 
+    }
+    return newString;
+}
+
+console.log(reverseString2(customText));

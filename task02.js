@@ -1,9 +1,13 @@
 'use strict';
 
-const customText = prompt('Введите текст, который нужно отформатировать', '');
-
-const formatString = (string) => {
-    return string.trim().substring(0, 1).toUpperCase() + string.trim().substring(1).toLowerCase();
+const isPrime = (n) => {
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
+      }
+      return n !== 1;
 }
 
-console.log(formatString(customText));
+console.log(isPrime(5));
+console.log(isPrime(15));
+console.log(isPrime(97));
+console.log(isPrime(1024));
