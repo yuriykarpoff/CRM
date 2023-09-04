@@ -1,8 +1,11 @@
 'use strict';
 
-const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
-const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
+const generateArray = (lengthArray) => {
+    let array = [];
+    for (let i = 0; i < lengthArray; i++) {
+        array.push(Math.ceil(Math.random() * 100))
+    }
+    return array
+}
 
-const succesStudents = allStudents.filter(item => !failedStudents.includes(item));
-
-console.log(succesStudents);
+console.log(generateArray(10))
