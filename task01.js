@@ -1,7 +1,8 @@
 'use strict';
 
-for (let i = 1; i < 11; i++) {
-    console.log('------------------------');
-    for (let y = 1; y < 11; y++)
-    console.log(`${i} в степени ${y} = ${i ** y}`);
-}
+const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
+const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
+
+const succesStudents = allStudents.filter(item => !failedStudents.includes(item));
+
+console.log(succesStudents);

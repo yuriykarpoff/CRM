@@ -1,23 +1,11 @@
 'use strict';
 
-// Первый способ
+const names= ['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'];
 
-const customText = prompt('Введите текст, который нужно перевернуть', '');
+const addPrefix = (arr, prefix) => {
+    const newNames = [...arr];
 
-const reverseString = (string) => {
-    return string.split('').reverse().join('');
+    return newNames.map(item => `${prefix} ${item}`);
 }
 
-console.log(reverseString(customText));
-
-// Второй способ
-
-const reverseString2 = (string) => {
-    let newString = '';
-    for (let i = string.length -1; i>=0; i--) {
-        newString += string[i]; 
-    }
-    return newString;
-}
-
-console.log(reverseString2(customText));
+console.log(addPrefix(names, 'Mr'));
