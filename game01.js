@@ -1,20 +1,32 @@
 'use strict';
 
-// const randomNumber = Math.floor(Math.random() * 100)
-// console.log(randomNumber)
-// const userNumber = +prompt('Введите число от 1 до 100', '');
+const randomNumber = Math.floor(Math.random() * 100)
+console.log(randomNumber)
 
-//     if (randomNumber < userNumber) {
-//         console.log('Меньше')
-//         userNumber = +prompt('Введите число от 1 до 100', '');
-//     } else 
-   
-//     if (randomNumber > userNumber) {
-//         console.log('Больше')    
-//         userNumber = +prompt('Введите число от 1 до 100', '');
-//     } else
+let userNumber = 0;
 
-//     if (randomNumber === userNumber) {
-//         console.log('Правильно')    
-//     }
+while ((userNumber !== null) && (+userNumber !== randomNumber)) {
+
+    let userNumber = prompt('Угадай число от 1 до 100', '');
+
+    switch (true) {
+        case userNumber === null:
+            alert('Игра окончена!');
+            break;
+            case Number.isNaN(+userNumber):
+            case (+userNumber < 0):
+            case (+userNumber > 100):
+            alert('Введи число от 1 до 100!');
+            break;
+        case +userNumber > randomNumber:
+            alert('Меньше!');
+            break;    
+        case +userNumber < randomNumber:
+            alert('Больше!');
+            break;
+        default:
+            alert('Правильно!');
+            break;
+    }
+}
 
