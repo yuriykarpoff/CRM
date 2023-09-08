@@ -8,7 +8,6 @@ const generateArray3 = (lengthArray, n, m, str) => {
     for (let i = 0; i < lengthArray ; i++) {
         const goTo = Math.ceil(Math.random() * (n - m + 1)) + m;
         if (parity === -1 || Math.abs(goTo % 2) === parity) array.push(goTo);
-        if (array.length < lengthArray);
     }
     return array  
 }
