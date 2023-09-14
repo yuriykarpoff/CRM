@@ -2,10 +2,11 @@
 
 const generateArray2 = (lengthArray, n, m) => {
     let array = [];
+
     for (let i = 0; i < lengthArray; i++) {
-        array.push(Math.ceil(Math.random() * (n - m + 1)) + m);
+        array.push(Math.floor(Math.random() * (n - m + 1)) + m);
     }
-    return array
+    return array;
 }
 
-console.log(generateArray2(10, -10, 10))
+console.log(generateArray2(99, 10, -10));
