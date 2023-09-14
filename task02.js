@@ -1,13 +1,13 @@
 'use strict';
 
 const generateArray2 = (lengthArray, n, m) => {
-    let array = [];
+  let array = [];
 
-    for (let i = 0; i < lengthArray; i++) {
-      array.push(Math.floor(Math.random() * (n - m + 1)) + m);
-    }
+  for (let i = 0; i < lengthArray; i++) {
+    array.push(Math.floor(Math.random() * (n - m + 1)) + m);
+  }
 
-    return array;
-}
+  return array;
+};
 
 console.log(generateArray2(9, 10, -10));
