@@ -8,11 +8,11 @@ const generateArray3 = (lengthArray, n, m, parity) => {
     if ((parity === 'even' && !(number % 2)) ||(parity === 'odd' && number % 2)
     ) {
       array.push(number);
-    }
+    } else (parity === null)
   }
   
   return array;
 };
 
 console.log(generateArray3(10, -5, 25, 'even'));
-console.log(generateArray3(10, -5, 25, 'odd'));
+
