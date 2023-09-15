@@ -14,7 +14,7 @@ const generateArray3 = (lengthArray, n, m, parity) => {
     } 
   }
   
-  return array 
+  return array;
 }
 
 console.log(generateArray3(19, 10, -10, 'even'));
