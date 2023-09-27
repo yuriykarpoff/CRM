@@ -37,7 +37,7 @@ const cart = {
     }
 }
 
-cart.totalPrice = 10;
+
 cart.add('Apple', 120000);
 cart.add('Samsung', 75000, 2);
 cart.add('Huawei', 30000, 5);
