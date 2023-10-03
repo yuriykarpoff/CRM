@@ -1,41 +1,42 @@
 'use strict';
 
 const cart = {
-    items: [],
-    count: 0,
-    get totalPrice() {
-        return this.calculateItemPrice();
-    },
+  items: [],
+  count: 0,
+  get totalPrice() {
+    return this.calculateItemPrice();
+  },
 
-    add(productName, productPrice, productCount = 1) {
-        const item = {
-            productName,
-            productPrice,
-            productCount
-        }
+  add(productName, productPrice, productCount = 1) {
+    const item = {
+      productName,
+      productPrice,
+      productCount,
+    };
 
-        this.items.push(item);
-        this.increaseCount(productCount);
-    },
+    this.items.push(item);
+    this.increaseCount(productCount);
+  },
 
-    increaseCount(productCount) {
-        this.count += productCount;
-    },
+  increaseCount(productCount) {
+    this.count += productCount;
+  },
 
-    calculateItemPrice() {
-        return this.items.reduce((currentSum, item) => (currentSum + (item.productPrice * item.productCount)), 0);
-    },
+  calculateItemPrice() {
+    return this.items.reduce((currentSum, item) =>
+      (currentSum + (item.productPrice * item.productCount)), 0);
+  },
 
-    clear() {
-        this.items = [];
-        this.count = 0;
-    },
+  clear() {
+    this.items = [];
+    this.count = 0;
+  },
 
-    print() {
-        console.log(JSON.stringify(this.items));
-        console.log(`Общая стоимость корзины: ${this.totalPrice}`);
-    }
-}
+  print() {
+    console.log(JSON.stringify(this.items));
+    console.log(`Общая стоимость корзины: ${this.totalPrice}`);
+  },
+};
 
 
 cart.add('Apple', 120000);
