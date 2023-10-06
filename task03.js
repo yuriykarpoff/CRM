@@ -1,19 +1,19 @@
 'use strict';
 
 const rectangle = {
-  width: 5,
-  height: 5,
-  set rectangleWidth(value) {
-    this.width;
+  _width: 5,
+  _height: 5,
+  set width(value) {
+    this._width = value;
   },
-  set rectangleHeight(value) {
-    this.height;
+  set height(value) {
+    this._height = value;
   },
   get perimeter() {
-    return 2 * (this.width + this.height) + ' см.';
+    return 2 * (this._width + this._height) + ' см.';
   },
   get square() {
-    return this.width * this.height + ' см.';
+    return this._width * this._height + ' см.';
   },
 };
 

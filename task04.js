@@ -37,13 +37,13 @@ const cart = {
     console.log(`Общая стоимость корзины: ${this.totalPrice}`);
   },
 
-  set setDiscount(promocode) {
+  set applyDiscount(promocode) {
     if (promocode === 'METHED') {
       this.discount = 0.15;
-    } else if (promocode === 'NEWYEAR') {
+    }
+
+    if (promocode === 'NEWYEAR') {
       this.discount = 0.21;
-    } else {
-      this.discount = 0;
     }
   },
 };
@@ -51,6 +51,6 @@ const cart = {
 cart.add('Apple', 1000, 5);
 cart.add('Samsung', 65000);
 cart.add('Huawei', 15000, 2);
-cart.setDiscount = 'NEWYEAR';
+cart.applyDiscount = 'NEWYEAR';
 
 cart.print();
